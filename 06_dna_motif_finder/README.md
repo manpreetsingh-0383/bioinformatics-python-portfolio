@@ -1,21 +1,25 @@
-# DNA Crime Analyzer
+# DNA Motif Finder
 
-crime_scene_dna = input("Enter Crime Scene DNA: ").upper()
+This project finds specific patterns (motifs) in a DNA sequence.
 
-suspects = {
-    "Suspect 1": "ATGCGTAC",
-    "Suspect 2": "GCTAGCTA",
-    "Suspect 3": "ATGCGTAC"
-}
+## 🧬 Features
+- Accepts DNA sequence input
+- Allows custom motif search
+- Returns all positions where motif is found
 
-print("\nCrime Scene DNA:", crime_scene_dna)
+## ⚙️ How it Works
+- Uses sliding window technique
+- Window size = motif length
+- Matches are stored as positions
 
-found = False
+## 📌 Example
+DNA: ATGCGATATG  
+Motif: ATG  
+Output: [0, 7]
 
-for name, dna in suspects.items():
-    if dna == crime_scene_dna:
-        print(f"{name} is a MATCH! 🧬")
-        found = True
+## ▶️ How to Run
+Run the script and enter DNA and motif.
 
-if not found:
-    print("No suspect matched ❌")
+## 💡 Applications
+- Gene regulation analysis
+- Binding site detection
